@@ -50,15 +50,16 @@ def get_page_paths(base_url):
 
     return url_path
 
-async def main():
-    base_url = "https://jina.ai/"
+async def main(url):
+    base_url = url
     paths = get_page_paths(base_url)
     content = await get_content(paths)
-    print("\nFound page paths:")
-    for path in paths:
-        print(path)
     return {"URL_PATH":list(paths) , "Content":content}
 
-if __name__ == "__main__":
-    data = asyncio.run(main())
+def crawl_domain(url):
+    data = asyncio.run(main(url))
+    return data
+
+#test
+print(crawl_domain("https://pypi.org/project/beautifulsoup4/"))
     
