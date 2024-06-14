@@ -60,6 +60,5 @@ def crawl_domain(url):
     data = asyncio.run(main(url))
     return data
 
-#test
-print(crawl_domain("https://pypi.org/project/beautifulsoup4/"))
+
     
