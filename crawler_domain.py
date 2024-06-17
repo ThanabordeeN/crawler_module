@@ -60,3 +60,8 @@ def crawl_domain(url):
     data = asyncio.run(main(url))
     return data
 
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> 80171be23be7c15cc0dfd9cc771933b8b34bf50a
